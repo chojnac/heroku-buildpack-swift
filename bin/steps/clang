@@ -7,3 +7,5 @@ if [[ ! -d "$CACHE_DIR/clang-$CLANG_VERSION" ]]; then
 fi
 
 export PATH="$CACHE_DIR/clang-$CLANG_VERSION/clang+llvm-$CLANG_VERSION-x86_64-linux-gnu-ubuntu-14.04/bin:$PATH"
+
+apt-get --assume-yes install systemtap-sdt-dev libblocksruntime-dev libkqueue-dev libpthread-workqueue-dev libbsd-dev libhttp-parser-dev libcurl4-openssl-dev libhiredis-dev
