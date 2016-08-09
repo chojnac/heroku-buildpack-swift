@@ -1,0 +1,2 @@
+puts-step "Installing libraries"
+apt-get --assume-yes install systemtap-sdt-dev libblocksruntime-dev libkqueue-dev libpthread-workqueue-dev libbsd-dev libhttp-parser-dev libcurl4-openssl-dev libhiredis-dev

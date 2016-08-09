@@ -33,7 +33,7 @@ if [ "$DISTRIB_RELEASE" != "14.04" ]; then
   fi
 puts-step "Ok.  Ubuntu 14.04 found"
 
-
+source "$BIN_DIR/steps/dependencies"
 source "$BIN_DIR/steps/swiftenv"
 source "$BIN_DIR/steps/swift"
 source "$BIN_DIR/steps/clang"
