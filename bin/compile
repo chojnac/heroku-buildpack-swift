@@ -22,6 +22,18 @@ fi
 mkdir -p "$CACHE_DIR"
 
 source "$BIN_DIR/utils"
+
+puts-step "Checking stack"
+if [ ! -f /etc/lsb-release ]; then
+    fail Sorry, only Ubuntu 14.04 is currently supported
+  fi
+. /etc/lsb-release
+if [ "$DISTRIB_RELEASE" != "14.04" ]; then
+    fail Sorry, only Ubuntu 14.04 is currently supported
+  fi
+puts-step "Ok.  Ubuntu 14.04 found"
+
+
 source "$BIN_DIR/steps/swiftenv"
 source "$BIN_DIR/steps/swift"
 source "$BIN_DIR/steps/clang"
